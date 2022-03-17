@@ -1,0 +1,21 @@
+{
+  "name": "imap2webhook",
+  "version": "1.0.0",
+  "description": "imap2webhook",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:relative/imap2webhook.git"
+  },
+  "author": "relative <hi@relative.im>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "dotenv": "16.0.0",
+    "form-data": "4.0.0",
+    "imapflow": "1.0.86",
+    "mailparser": "3.4.0"
+  }
+}
