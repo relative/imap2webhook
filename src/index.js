@@ -121,7 +121,7 @@ async function main() {
 
   setInterval(() => {
     monitor()
-      .then(() => console.error('Complete'))
+      .then(() => console.log('Complete'))
       .catch((err) => {
         console.error(err)
         process.exit(1)
