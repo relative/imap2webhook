@@ -1,0 +1,24 @@
+FROM node:17-buster-slim
+
+ENV IMAP_HOST "imap.domain.tld"
+ENV IMAP_PORT ""
+ENV IMAP_SECURE 1
+ENV IMAP_USER "ser@domain.tld"
+ENV IMAP_PASS "password"
+ENV CHECK_INTERVAL 180000
+
+ENV MAILBOXES 1
+ENV MAILBOX_0_PATH mailboxfolder
+ENV MAILBOX_0_COLOR 0x9580ff
+ENV MAILBOX_0_TAG webhooktag
+ENV MAILBOX_0_WEBHOOK_ID 912345678901234567
+ENV MAILBOX_0_WEBHOOK_TOKEN secret
+
+WORKDIR /app
+
+COPY ./src/ ./src/
+COPY package.json .
+
+RUN npm install
+
+ENTRYPOINT [ "node", "src/index.js" ]
