@@ -70,7 +70,7 @@ function createEmbed(mailbox, msg, mp) {
       },
       {
         name: 'Content',
-        value: mp.text || '*no plain-text content*',
+        value: (mp.text || '*no plain-text content*').substr(0, 1024),
       },
     ],
     author: createAuthor(from, fromAddress),
